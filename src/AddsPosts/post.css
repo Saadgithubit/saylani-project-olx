@@ -1,0 +1,49 @@
+.categories{
+    border: 1px solid black;
+    width: 40%;
+    height: 100%;
+    margin: auto;  
+}
+
+.categories h3{
+    font-size: 22px;
+    text-align: center;
+
+}
+
+.categories li{
+    list-style: none;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: left;
+    border-top: 1px solid black;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    
+}
+
+.categories li:hover{
+    background-color: rgb(158, 221, 246);
+}
+
+.categories ul{
+    padding: 0;
+}
+.left-font{
+    margin-right: 60px;
+}
+
+.right-font{
+    margin-left: 20px;
+}
+
+#upload-files{
+    display: none;
+}
+
+.hide{
+    display: none;
+}

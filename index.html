@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olx Clone Web Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler ms-auto" type="button" data-mdb-toggle="collapse"
+        data-mdb-target="#navbarToggleExternalContent3" aria-controls="navbarToggleExternalContent3"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  <div class="collapse" id="navbarToggleExternalContent3">
+    <div class="bg-light shadow-3 p-4">
+      <button class="btn btn-link btn-block border-bottom m-0">Link 1</button>
+      <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
+      <button class="btn btn-link btn-block m-0">Link 3</button>
+    </div>
+  </div>
+
+    <div class="container-fluid">
+    <div class="header-top">
+
+      <div class="header-img">
+ <img src="https://logos-world.net/wp-content/uploads/2022/04/OLX-Logo.png" width="30px" height="20px" alt="">
+    </div>
+    <div class="header-a">
+     <a href=""><i class="fa-solid fa-car"></i> MOTORS</a>
+    </div>
+    <div class="header-a2">
+     <a href=""><i class="fa-regular fa-building"></i> PROPERTY</a>
+    </div>
+
+    </div>
+
+  
+  <div class="header">
+    <div>
+        <img src="./Images/Capture 2.PNG" class="hidden" alt="">
+    </div>
+
+    <div class="sel-div">
+        <select name="" id="inp">
+            <option value="">Pakistan</option>
+        </select>
+        <div class="icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png" class="fa-magnifying-glass" alt="">
+        </div>
+    </div>
+    <div class="parent-inp">
+        <input type="text" placeholder="Find car,Mobile Phones & more" name="abc" id="input">
+        <div class="icon-2">
+            <img src="https://cdn4.vectorstock.com/i/1000x1000/98/28/magnifying-glass-icon-on-black-background-black-vector-25959828.jpg" class="search-bar" alt="">
+        </div>
+    </div>
+    <div class="btn-div">
+      <button type="button" class="btn btn-light logIn-button" id="logIn-button" onclick="changeLocation()">Log-In</button>
+    <a href=""></a>
+        <button class="sell" onclick="gotoPosts()"> <b> +Sell </b></button>
+    </div>
+  </div>
+
+  <div>
+  </div>
+    <div class="container-fluid navbar">
+        <ul class="ul">
+            <li class="Categories"> <select class="select">
+                <option class="option">All Categories</option>
+            </select></li>
+            <li>Mobile Phones</li>
+            <li>Cars</li>
+            <li>Motor Cycles</li>
+            <li>Houses</li>
+            <li>TV-Audio_Video</li>
+            <li>Tablets</li>
+            <li>Land & Plots</li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="capture">
+    <img src="./Images/Capture 7.PNG" width="100%" alt="">
+  </div>
+  <div class="capture-2">
+    <img src="./Images/Capture 8.PNG" alt="">
+  </div>
+  <div class="h3">
+    <h3>All Categories</h3>
+
+  </div>
+
+  <div class="container-fluid items">
+    <div class="same">
+    <img src="https://www.olx.com.pk/assets/mobiles.8c768c96bfde33f18fcf5af2a8b9cf71.png" class="img" alt="">
+    <p>Mobiles</p> 
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/vehicles.29fb808d5118f0db56f68a39ce5392e2.png" class="img" alt="">
+    <p>Vehicles</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/property-for-sale.e3a00dbfdaa69fe5f713665f1069502f.png" class="img"alt="">
+    <p>Property For Sale</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/property-for-rent.8436595fbaa90d47f0178006f57090a8.png" class="img"alt="">
+    <p>Property For Rent</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/electronics-home-appliances.46e034dd8adca44625c2c70e4d1b5984.png" class="img"alt="">
+    <p>Electronics Home Appliance</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/bikes.4dcd02c49b2b83aa5b4d629d1e2b383e.png" class="img" alt="">
+    <p>Bikes</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/business-industrial-agriculture.704a6ffb9081bc94b11c102cc613670f.png" class="img" alt="">
+    <p>Business Industrial Agriculture</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/services.dc6aef196c0403dc61b0ee813f66fa5b.png" class="img" alt="">
+    <p>Services</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/jobs.79e6136dda02111cf8e7afe26b9e0f93.png" class="img" alt="">
+    <p>Jobs</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/animals.62d396e85f7523dbc8ff23889fdd5c31.png" class="img" alt="">
+    <p>Animals</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/furniture-home-decor.66bcf157a53ea4c736a5b0af41219475.png" class="img"v alt="">
+    <p>Furniture & Home Decor</p>
+</div><div class="same">
+    <img src="https://www.olx.com.pk/assets/fashion-beauty.dd2cf7638c29b0e5c084a6673dd94dd7.png" class="img" alt="">
+    <p>Fashion Beauty</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/books-sports-hobbies.6fee8d841b332d65a10f050f4a2ee1c8.png" class="img" alt="">
+    <p>Books Sports & Hobbies</p>
+</div>
+<div class="same">
+    <img src="https://www.olx.com.pk/assets/kids.cd8d8864804f1c35dd6a7df68268a48d.png" class="img" alt="">
+    <p>Kids</p>
+</div>
+  </div>
+
+ 
+<div id="allProducts">
+</div>
+
+  <br>
+
+  <div class="capture-2">
+    <img src="./Images/Capture 8.PNG" alt="">
+  </div>
+ <div class="capture-3">
+  <img src="./Images/Capture 9.PNG" width="100%" alt="">
+ </div>
+
+ <div class="footer">
+  <div class="first-col">
+    <ul class="ul-1">
+      <li class="footer-li-heading"><h3>Popular Categories</h3></li>
+      <li class="footer-li">Cars</li>
+      <li class="footer-li">Flats for Rent</li>
+      <li class="footer-li">Mobiles Phones</li>
+      <li class="footer-li">Jobs</li>
+
+    </ul>
+  </div>
+
+  <div class="first-col">
+    <ul class="ul-1">
+      <li class="footer-li-heading"><h3>Trending Searches</h3></li>
+      <li class="footer-li">Bikes</li>
+      <li class="footer-li">Watches</li>
+      <li class="footer-li">Books</li>
+      <li class="footer-li">Dogs</li>
+
+    </ul>
+  </div>
+
+  <div class="first-col">
+    <ul class="ul-1">
+      <li class="footer-li-heading"><h3>About Us</h3></li>
+      <li class="footer-li">About Dubizzle Group</li>
+      <li class="footer-li">OLX Blog</li>
+      <li class="footer-li">Contact Us</li>
+      <li class="footer-li">OLX For Bussines</li>
+
+    </ul>
+  </div>
+
+  <div class="first-col">
+    <ul class="ul-1">
+      <li class="footer-li-heading"><h3>Olx</h3></li>
+      <li class="footer-li">Help</li>
+      <li class="footer-li">Site Map</li>
+      <li class="footer-li">Term of use</li>
+      <li class="footer-li">Prvacy Policy</li>
+
+    </ul>
+  </div>
+
+  <div class="last">
+    <div>
+    <h3 class="follow">FOLLOW US</h3>
+    <img src="https://www.olx.com.pk/assets/iconFacebook_noinline.773db88c5b9ee5aaab365e61cdb750da.svg" width="25px" height="30px" alt="">
+    <img src="https://www.olx.com.pk/assets/iconTwitter_noinline.6037fa7d9a7b9d6408fb1b3d70524b97.svg" width="25px" height="30px" alt="">
+    <img src="https://www.olx.com.pk/assets/iconYoutube_noinline.c85bd6801ec83d6a3b498059550bef26.svg" width="25px" height="30px" alt="">
+    <img src="https://www.olx.com.pk/assets/iconInstagram_noinline.d7d5811ebc44e03a674c8d0b5ff3f232.svg" width="25px" height="30px" alt="">
+  </div><br>
+  <div>
+    <img src="https://www.olx.com.pk/assets/iconAppStoreEN_noinline.a731d99c8218d6faa0e83a6d038d08e8.svg" width="90px" height="50px" alt="">
+    <img src="https://www.olx.com.pk/assets/iconGooglePlayEN_noinline.9892833785b26dd5896b7c70b089f684.svg" width="90px" height="50px" alt="">
+    <img src="https://www.olx.com.pk/assets/iconAppGallery_noinline.6092a9d739c77147c884f1f7ab3f1771.svg" width="90px" height="50px" alt="">
+  </div>
+  </div>
+ </div>
+
+<!-- ......................................Accordian.......................................... -->
+
+ <div class="accordion accordion-flush .col-12 acc" id="accordionFlushExample ">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Categories
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+    </div>
+  </div>
+  <div class="accordion-item-">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Popular Categories
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="first-col bg-secondary text-light">
+        <ul class="ul-1">
+          <li class="footer-li">Cars</li>
+          <li class="footer-li">Flats for Rent</li>
+          <li class="footer-li">Mobiles Phones</li>
+          <li class="footer-li">Jobs</li>
+    
+        </ul>
+      </div>
+  </div>
+  <div class="accordion-item-">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Trending Searches
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="first-col bg-secondary text-light">
+        <ul class="ul-1">
+          <li class="footer-li">Bikes</li>
+          <li class="footer-li">Watches</li>
+          <li class="footer-li">Books</li>
+          <li class="footer-li">Dogs</li>
+    
+        </ul>
+      </div>
+</div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        About Us
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="first-col bg-secondary text-light">
+    <ul class="ul-1">
+      <li class="footer-li">About Dubizzle Group</li>
+      <li class="footer-li">OLX Blog</li>
+      <li class="footer-li">Contact Us</li>
+      <li class="footer-li">OLX For Bussines</li>
+
+    </ul>
+  </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        OLX
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="first-col">
+        <ul class="ul-1">
+          <li class="footer-li">Help</li>
+          <li class="footer-li">Site Map</li>
+          <li class="footer-li">Term of use</li>
+          <li class="footer-li">Prvacy Policy</li>
+    
+        </ul>
+      </div>
+  </div>
+
+  <div class="follow-us">
+    <h3 class="follow">FOLLOW US</h3>
+    <img src="https://www.olx.com.pk/assets/iconFacebook_noinline.773db88c5b9ee5aaab365e61cdb750da.svg" width="25px" height="30px" alt="">
+    <img src="https://www.olx.com.pk/assets/iconTwitter_noinline.6037fa7d9a7b9d6408fb1b3d70524b97.svg" width="25px" height="30px" alt="">
+    <img src="https://www.olx.com.pk/assets/iconYoutube_noinline.c85bd6801ec83d6a3b498059550bef26.svg" width="25px" height="30px" alt="">
+    <img src="https://www.olx.com.pk/assets/iconInstagram_noinline.d7d5811ebc44e03a674c8d0b5ff3f232.svg" width="25px" height="30px" alt="">
+  </div><br>
+  <div class="last-button">
+    <img src="https://www.olx.com.pk/assets/iconAppStoreEN_noinline.a731d99c8218d6faa0e83a6d038d08e8.svg" width="90px" height="50px" alt="">
+    <img src="https://www.olx.com.pk/assets/iconGooglePlayEN_noinline.9892833785b26dd5896b7c70b089f684.svg" width="90px" height="50px" alt="">
+    <img src="https://www.olx.com.pk/assets/iconAppGallery_noinline.6092a9d739c77147c884f1f7ab3f1771.svg" width="90px" height="50px" alt="">
+  </div>
+  </div>
+
+  
+ <div class="end">
+  <p class="last-para">Free Classified in pakistan . @ 2006-2023 OLX</p>
+ </div>
+
+  
+
+  <script src="app.js"></script>
+
+    <script src="https://kit.fontawesome.com/80515f4cd6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+    
+
+
+  </body>
+</html>
