@@ -64,14 +64,15 @@
         </div>
     </div>
     <div class="btn-div">
-      <button type="button" class="btn btn-light logIn-button" id="logIn-button" onclick="changeLocation()">Log-In</button>
+      <button type="button" class="btn btn-light logIn-button" id="logIn-button">Log-In</button>
     <a href=""></a>
-        <button class="sell" onclick="gotoPosts()"> <b> +Sell </b></button>
+        <button class="sell" id="sell-btn"> <b> +Sell </b></button>
     </div>
   </div>
 
   <div>
-  </div>
+  </div><br>
+  <p id="userId"></p>
     <div class="container-fluid navbar">
         <ul class="ul">
             <li class="Categories"> <select class="select">
@@ -335,7 +336,7 @@
 
   
 
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 
     <script src="https://kit.fontawesome.com/80515f4cd6.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>

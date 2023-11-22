@@ -47,3 +47,67 @@
 .hide{
     display: none;
 }
+
+.form{
+    border:  1px solid black;
+    width: 90%;
+    padding: 2px;
+    margin: auto;
+    
+}
+.selected-div{
+    width: 97%;
+    border-bottom: 1px solid black;
+    height: 100px;
+    padding: 20px;
+}
+
+.selected-div h3{
+    font-size: 30px;
+    margin-top: -10px;
+    width: 70%;
+
+}
+
+.selected-div p{
+    font-size: 20px;
+    width: 70%;
+}
+
+.inner-form{
+    border: 1px solid black;
+    width: 90%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.inner-form input{
+    width: 80%;
+    height: 50px;
+    font-size: 18px;
+}
+.clicked-items{
+    border-color: skyblue;
+}
+
+#description{
+    height: 100px;
+}
+
+.img-div{
+    border: 1px solid black;
+    width: 50%;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+}
+
+#post-btn{
+    width: 130px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(34, 40, 151);
+    margin: 20px 30px;
+}
+
