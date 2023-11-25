@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #1C8EF9;
-}
 
 /* ...............................signup page...................................... */
 
@@ -79,4 +76,16 @@ fieldset{
  .link a{
     text-decoration: none;
     color: rgb(33, 62, 205);
+ }
+
+ @media only screen and (min-width: 426px) and (max-width: 768px){
+    fieldset{
+        width: 60%;
+    }
+ }
+
+ @media only screen and (max-width: 425px){
+    fieldset{
+        width: 100%;
+    }
  }

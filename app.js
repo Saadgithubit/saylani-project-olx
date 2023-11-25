@@ -63,7 +63,7 @@ async function renderAdds(){
   const title = document.createElement('h4')
   title.innerHTML = ad.title
   const amount = document.createElement('h5')
-  amount.innerHTML = ad.amount
+  amount.innerHTML = `Rs ${ad.amount}`
   card.append(img)
   card.append(line)
   card.append(amount)

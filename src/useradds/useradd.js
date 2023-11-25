@@ -1,53 +1,45 @@
-import{getUserAdds,auth, onAuthStateChanged} from "../config.js"
+import { getUserAdds, auth, onAuthStateChanged } from "../config.js"
 
 onAuthStateChanged(auth, (user) => {
-    if (user) {
-      
-       myAdds()
+   if (user) {
 
- 
-    }
+      myAdds()
+
+
+   }
 });
 
-     async function myAdds(){
-        const userId = await auth.currentUser.uid;
-        const allAdds = await getUserAdds(userId)
-        
-        console.log(userId);
-        
+async function myAdds() {
 
-       console.log(alladds);
-       }
+   const userId = await auth.currentUser.uid;
+   const allAdds = await getUserAdds(userId)
+   const loader = document.getElementById('loader')
+   loader.className = 'hide'
+   const container = document.getElementById('container')
+   console.log(allAdds);
 
-//        const container = document.getElementById('conatiner')
+   for (var i = 0; i < allAdds.length; i++) {
+      const ad = allAdds[i]
 
-//   for(var i = 0 ; i < allAdds.length; i++){
-//   const ad =  allAdds[i] 
+      const card = document.createElement('div')
+      card.className = 'card-div'
 
-//   const card = document.createElement('div')
-//   card.className = 'card-div'
-//   card.addEventListener('click' , ()=>{
-//     window.location.href = './src/details/details.html?adId=' + ad.id
-//   })
+      const img = document.createElement('img')
+      img.src = ad.img
+      const title = document.createElement('h4')
+      title.innerHTML = ad.title
+      const amount = document.createElement('h5')
+      amount.innerHTML = `Rs ${ad.amount}`
+      card.append(img)
+      card.append(title)
+      card.append(amount)
+      container.append(card)
+      //   console.log(ad);
 
-//   const img = document.createElement('img')
-//   img.src = ad.img
-//   const line = document.createElement('br')
-//   const title = document.createElement('h4')
-//   title.innerHTML = ad.title
-//   const amount = document.createElement('h5')
-//   amount.innerHTML = ad.amount
-//   card.append(img)
-//   card.append(line)
-//   card.append(amount)
-//   card.append(title)
-//   container.append(card)
-//   console.log(ad);
 
-  
-// }
+   }
 
-    
-     
+}
+
 
 

@@ -1,24 +1,27 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body , html{
+body,
+html {
     width: 100%;
     height: 100%;
 }
 
 /* ..................................Header.......................................... */
-.container-fluid{
+.container-fluid {
     width: 100% !important;
 }
 
-.navbar{
+.navbar {
     display: none !important;
- }
-.header-top{
+}
+
+.header-top {
     display: flex;
+    flex-wrap: wrap;
     padding: 20px;
     padding-left: 0 0 0 20px;
     word-spacing: 5px;
@@ -26,22 +29,56 @@ body , html{
     width: 100%;
 }
 
-.hamb{
-    display: none !important;
-}
-.fa-car , .fa-building{
+.fa-car,
+.fa-building {
     font-size: 15px;
     background-color: white;
     color: black;
     margin-left: 30px;
 }
-.header-a> a , .header-a2 > a{
+
+.header-a>a,
+.header-a2>a {
     font-size: 12px;
     text-decoration: none;
     color: black;
 }
 
-.header{
+.user {
+    width: 70%;
+    margin-left: 40px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.user p {
+    font-size: 25px;
+    width: 50%;
+}
+
+
+.user a button {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f7f8f8;
+    color: black;
+}
+
+.user a button:hover {
+    background-color: black;
+    color: white;
+}
+
+.user button a {
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.header {
     display: flex;
     justify-content: space-around;
     height: 80px;
@@ -50,66 +87,72 @@ body , html{
     width: 100%;
 }
 
-.sel-div{
+.sel-div {
     width: 20%;
 }
 
-#inp{
+#inp {
     width: 100%;
     height: 50px;
     border: 2px solid black;
     padding-left: 30px;
     border-radius: 5px;
 }
-.icon{
+
+.icon {
     position: relative;
     top: -38px;
     left: 10px;
 }
-.fa-magnifying-glass{
+
+.fa-magnifying-glass {
     width: 20px;
     height: 20px;
-    
+
 }
-#input{
+
+#input {
     width: 500px;
     height: 50px;
     border: 2px solid black;
     padding-left: 20px;
     border-radius: 5px;
 }
-.icon-2{
+
+.icon-2 {
     display: inline-block;
     position: relative;
     right: 55px;
     bottom: 3px;
 
 }
-.search-bar{
+
+.search-bar {
     width: 50px;
     height: 50px;
-    
+
 }
 
 
-#logIn-button{
+#logIn-button {
 
-    border: 1px solid black ;
+    border: 1px solid black;
     position: relative;
     right: 20px;
-    transition: all 0.5s ease-in;
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
 }
 
-#logIn-button:hover{
+#logIn-button:hover {
     background-color: skyblue;
     color: white;
     opacity: 1;
-    transform: scale(1.1);
-   
+
 }
 
 
-.sell{
+.sell {
     width: 110px;
     height: 50px;
     border: 5px solid black;
@@ -119,67 +162,46 @@ body , html{
     border-left-color: blue;
 }
 
-.user{
-    height: 70px;
-    display: flex;
-    justify-content: space-around;
-}
 
-.user p{
-    font-size: 25px;
-    width: 30%;
-    margin-top: 10px;
-}
 
-.user a button{
-    width: 120px;
-    height: 60px;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #f7f8f8;
-    color: black;
-}
-.user a button:hover{
-    background-color: black;
-    color: white;
-}
-.user button a{
-    text-decoration: none;
-    border: 1px solid black;
-}
+
 /* .user button a:hover{
     color: white;
 
 } */
 /* ......................................Nav-Bar........................................ */
-.nav-bar> ul{
+.nav-bar>ul {
     display: flex;
 }
-ul> li{
+
+ul>li {
     list-style: none;
     margin: 15px;
 }
-ul> li:hover{
+
+ul>li:hover {
     color: skyblue;
     cursor: pointer;
 }
 
-.select{
+.select {
     border: none;
     font-weight: bold;
 
 }
- .capture-2{
+
+.capture-2 {
     text-align: center;
- }
- /* .............................................products................................... */
- #allProducts{
+}
+
+/* .............................................products................................... */
+#allProducts {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;   
- }
- 
- .card-div{
+    padding: 30px;
+}
+
+.card-div {
     width: 300px;
     height: auto;
     margin: 20px;
@@ -189,308 +211,377 @@ ul> li:hover{
     transition: all 0.5s ease-in;
     box-shadow: 10px 10px 20px gray;
 
- }
+}
 
- .card-div:hover{
+.card-div:hover {
     transform: scale(1.1);
- }
+}
 
- .card-div img{
+.card-div img {
     border-bottom: 1px solid black;
+    padding: 20px;
+    background-color: rgb(215, 220, 222);
     width: 100%;
     height: 150px;
- }
- #allProducts h5{
-    margin-top: 10px;
- }
+}
 
- .card-div p{
+#allProducts h5 {
+    margin-top: 10px;
+}
+
+.card-div p {
     width: 90%;
     font-weight: 500;
     height: auto;
-     height: auto;
- }
- #allProducts h4, h5 , p{
+    height: auto;
+}
+
+#allProducts h4,
+h5,
+p {
     margin-left: 10px;
- }
+}
 
- #allProducts h4{
+#allProducts h4 {
     color: rgb(28, 136, 179);
- }
+    font-size: 20px;
+}
 
- #allProducts h5{
+#allProducts h5 {
     color: #FF6801;
-    
- }
 
- .h3{
+}
+
+.h3 {
     margin-left: 30px;
- }
- .items{
+}
+
+.items {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px ;
+    padding: 10px;
     padding-left: 40px;
- }
- .same{
-    text-align: center;
- }
+}
 
- .img{
+.same {
+    text-align: center;
+}
+
+.img {
     width: 100px;
-   margin: 20px;
- }
- p{
-   font-weight: bold;
-   width: 100px;
- }
- /* .........................................Cards............................................... */
-.main{
+    margin: 20px;
+}
+
+p {
+    font-weight: bold;
+    width: 100px;
+}
+
+/* .........................................Cards............................................... */
+.main {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px 0 20px;
 }
 
- .heading{
+.heading {
     margin-left: 30px;
     display: flex;
- }
-.link{
+}
+
+.link {
     display: flex;
     justify-content: flex-end;
     font-size: 50px;
 }
 
- /* ................................................Footer.......................................... */
-.footer{
+/* ................................................Footer.......................................... */
+.footer {
     display: flex;
     justify-content: space-around;
     border: 1px solid lightgray;
     height: 200px;
     background-color: rgb(233, 231, 231);
 }
- .footer-li-heading> h3{
+
+.footer-li-heading>h3 {
     font-size: 18px !important;
     margin-left: -15px;
- }
+}
 
- .footer-li{
+.footer-li {
     font-size: 13px !important;
     margin: 2px;
- }
- .follow{
+}
+
+.follow {
     font-size: 16px;
     margin-top: 13px;
- }
+}
 
- .end{
+.end {
     border: 1px solid lightgrey;
     height: 50px;
     background-color: hsla(203, 73%, 14%, 0.796);
     display: flex;
     justify-content: flex-end;
     color: white;
- }
+}
 
- .last-para{
+.last-para {
     margin-top: 10px;
     font-size: 15px;
     width: 350px;
- }
+}
 
- .acc{
+.acc {
     display: none;
- }
+}
+
 /* .......................................Media Queries ......................................................*/
 
-@media only screen and (min-width: 769px) and (max-width: 1024px){
-    body{
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
         width: 100%;
     }
 
-    .header{
+    .header {
         display: flex !important;
         width: 100%;
         padding: 10px;
     }
-  
-    #inp{
+
+    #inp {
         width: 100%;
     }
-    .parent-inp{
+
+    .parent-inp {
         width: 40%;
     }
-    #input{
+
+    #input {
         width: 100%;
     }
-    .icon-2{
+
+    .icon-2 {
         position: relative;
         top: -49.5px;
         left: 340px;
     }
-    
-   
+
+
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
-    body{
+    body {
         width: 100% !important;
     }
 
-    .navbar{
+    .navbar {
         display: block !important;
-     }
-     .header-top{
-        width: 100% ;
+    }
+
+    .nav-login-btn,
+    .nav-sell-btn {
+        background-color: #f7f8f8;
+        border: none !important;
+        font-size: 23px;
+        margin: 30px;
+    }
+
+    .nav-login-btn a,
+    .nav-sell-btn a {
+        text-decoration: none;
+    }
+
+    .header-top {
+        width: 100%;
         display: flex;
         justify-content: space-around;
         margin-top: 0;
     }
-    .hamb{
-        display: block !important;
-        position: absolute !important;
-        top: 10px;
-        left: 20px;
+
+    .user {
+        position: absolute;
+        left: 5%;
+        top: 0%;
+        width: 80%;
     }
-        .hidden , .sel-div , .btn-div , .sell, .ul , ul>li, .icon-2{
+
+    .user p {
+        width: 80% !important;
+    }
+
+    .user a button{
+        border: none;
+    }
+
+
+
+    .hidden,
+    .sel-div,
+    .btn-div,
+    .sell,
+    .ul,
+    ul>li,
+    .icon-2 {
         display: none;
-        }
-        .header{
-            width: 100%;
-            display: flex;
-            padding: 0;
-        }
-        .parent-inp{
-            width: 90%;
-        }
-     #input{
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        padding: 0;
+    }
+
+    .parent-inp {
+        width: 90%;
+    }
+
+    #input {
         display: inline-block;
         width: 100%;
         height: 70px;
         font-size: 20px;
         padding-left: 80px;
         border-radius: 10px;
-     }
+    }
 
-     /* .icon-2{
+    /* .icon-2{
         height: 70px;
         position: absolute;
         top: 65px;
         right: 30px;
      } */
 
-     .search-bar{
+    .search-bar {
         height: 100%;
-     }
+    }
 
-     #allProducts{
-       padding: 30px;
-     }
-     .card-div{
+    #allProducts {
+        padding: 30px;
+    }
+
+    .card-div {
         margin: 20px;
-     }
+    }
 
-     .card-div p{
+    .card-div p {
         width: 90% !important;
         height: auto !important;
-        
-     }
 
-    .capture> img{
+    }
+
+    .capture>img {
         width: 100%;
         height: 200px;
     }
-    .capture-2{
+
+    .capture-2 {
         display: none;
     }
-    
-    .h3> h3{
-     
+
+    .h3>h3 {
+
         font-size: 50px;
         width: 320px;
     }
-    
-    .items{
-       
+
+    .items {
+
         display: flex;
         flex-wrap: nowrap;
         overflow-y: scroll;
         padding: 0;
 
-     }
-     .same{
+    }
+
+    .same {
         height: 200px;
-     }
-     .same > img , p{
+    }
+
+    .same>img,
+    p {
         width: 50px !important;
         height: 50px !important;
-     }
-     .heading , .heading > h3{
+    }
+
+    .heading,
+    .heading>h3 {
         width: 50%;
         display: block;
         width: 500px;
         font-size: 70px;
-     }
-     h3{
+    }
+
+    h3 {
         width: 300px;
         font-size: 50px !important;
-     }
-     .main{
+    }
+
+    .main {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        
-     }
 
-   
+    }
 
-    .capture-2 , .capture-3{
+
+
+    .capture-2,
+    .capture-3 {
         display: none;
     }
-    
-    .footer{
+
+    .footer {
         display: none;
     }
-    .acc{
+
+    .acc {
         display: block;
-        width: 100% ;
+        width: 100%;
     }
- 
-    .accordion-button{
+
+    .accordion-button {
         font-size: 20px !important;
         padding-left: 30px !important;
         height: 100px !important;
         border-top: 1px solid gray !important;
         border-bottom: 1px solid gray !important;
     }
-    .end{
+
+    .end {
         width: 100%;
         height: 100px;
         display: flex;
         justify-content: flex-start
     }
-    .last-para{
+
+    .last-para {
         font-size: 20px;
         width: 100% !important;
         text-align: center;
         margin-top: 30px;
-        
+
     }
-    .follow-us{
+
+    .follow-us {
         display: flex;
         height: 100px;
         border-top: 1px solid gray;
         border-bottom: 1px solid gray;
     }
-    .follow{
+
+    .follow {
         font-size: 20px !important;
         margin-left: 20px;
         margin-top: 40px;
     }
-    .follow-us> img{
+
+    .follow-us>img {
         width: 50px !important;
         height: 50px;
         margin: 20px;
@@ -499,352 +590,460 @@ ul> li:hover{
         margin-top: 30px;
     }
 
-    .last-button{
+    .last-button {
         height: 200px;
         text-align: center;
     }
-    .last-button>img{
+
+    .last-button>img {
         width: 200px;
         height: 150px;
     }
- }
-
- @media only screen and (min-width: 321px) and (max-width: 425px) {
-    
-    body{
-        width: 100% !important;
-     }
-
-     .navbar{
-        display: block !important;
-     }
-     
-  .header-top{
-      display: flex;
-      justify-content: space-evenly;
-      width: 100%;
-      padding-left: 40px;
-  }
-  .hamb{
-    display: block !important;
-    position: absolute !important;
-    top: 10px;
-    left: 20px;
 }
 
-      .hidden , #inp , .sel-div , .btn-div , .sell, .ul , ul>li , .icon-2{
-      display: none;
-      }
-      .header{
-          display: flex;
-          padding: 0;
-      }
-      .parent-inp{
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+
+    body {
+        width: 100% !important;
+    }
+
+    .navbar {
+        display: block !important;
+    }
+
+    .nav-login-btn,
+    .nav-sell-btn {
+        background-color: #f7f8f8;
+        border: none !important;
+        font-size: 18px;
+        margin: 30px;
+    }
+
+    .nav-login-btn a,
+    .nav-sell-btn a {
+        text-decoration: none;
+    }
+
+    .header-top {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding-left: 40px;
+    }
+
+    .user {
+        position: absolute;
+        left: 5%;
+        top: 0%;
+        width: 80%;
+    }
+
+    .user p {
+        margin-top: 10px;
+        font-size: 18px;
+        width: 80% !important;
+    }
+
+    .user a button {
+        border: none;
+        width: 80px;
+        font-size: 15px !important;
+    }
+
+    .hidden,
+    #inp,
+    .sel-div,
+    .btn-div,
+    .sell,
+    .ul,
+    ul>li,
+    .icon-2 {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        padding: 0;
+    }
+
+    .parent-inp {
         width: 100%;
         padding: 0;
-      }
-   #input{
-      display: inline-block;
-      width: 100%;
-      height: 70px;
-      font-size: 20px;
-      padding-left: 40px;
-      border-radius: 10px;
-     
-   }
-   /* .icon-2{
+    }
+
+    #input {
+        display: inline-block;
+        width: 100%;
+        height: 70px;
+        font-size: 20px;
+        padding-left: 40px;
+        border-radius: 10px;
+
+    }
+
+    /* .icon-2{
     height: 70px;
     position: absolute;
     top: 65px;
     right: 15px;
  } */
- 
- .search-bar{
-    height: 100%;
- }
 
- #allProducts{
-    justify-content: center;
-  }
+    .search-bar {
+        height: 100%;
+    }
 
-  .card-div p{
-    width: 90% !important;
-    height: auto !important;
-    
- }
+    #allProducts {
+        justify-content: center;
+    }
 
-  .capture> img{
-      width: 100%;
-      height: 250px;
-  }
-  .capture-2{
-      display: none;
-  }
-  
-  .h3> h3{
-   
-      font-size: 30px;
-      width: 300px;
-  }
-  
-  .items{
-     
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-y: scroll;
-      padding: 0;
+    .card-div p {
+        width: 90% !important;
+        height: auto !important;
 
-   }
-   .same{
-      height: 200px;
-   }
-   .same > img , p{
-      width: 50px !important;
-      height: 50px !important;
-   }
-   .heading , .heading > h3{
-      display: block;
-      width: 300px;
-      font-size: 70px;
-   }
-   h3{
-    font-size: 30px !important;
-      width: 300px;
-   }
-   .main{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      
-   }
- 
-  .capture-2 , .capture-3{
-      display: none;
-  }
-  
-  .footer{
-      display: none;
-  }
-  .acc{
-      display: block;
-      width: 100% ;
-  }
+    }
 
-  .accordion-button{
-      font-size: 20px !important;
-      padding-left: 30px !important;
-      height: 100px !important;
-      border-top: 1px solid gray !important;
-      border-bottom: 1px solid gray !important;
-  }
-  .end{
-      width: 100%;
-      height: 100px;
-      display: flex;
-      justify-content: flex-start
-  }
-  .last-para{
-      font-size: 20px;
-      width: 100% !important;
-      text-align: center;
-      margin-top: 30px;
-      
-  }
-  .follow-us{
-      display: flex;
-      height: 100px;
-      border-top: 1px solid gray;
-      border-bottom: 1px solid gray;
-  }
-  .follow{
-      font-size: 20px !important;
-      margin-left: 20px;
-      margin-top: 40px;
-  }
-  .follow-us> img{
-      width: 30px !important;
-      height: 40px;
-      margin: 20px;
-      position: relative;
-      left: 10px;
-      margin-top: 30px;
-  }
+    .capture>img {
+        width: 100%;
+        height: 250px;
+    }
 
-  .last-button{
-      height: 200px;
-      text-align: center;
-  }
-  .last-button>img{
-      width: 150px;
-      height: 100px;
-  }
+    .capture-2 {
+        display: none;
+    }
+
+    .h3>h3 {
+
+        font-size: 30px;
+        width: 300px;
+    }
+
+    .items {
+
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        padding: 0;
+
+    }
+
+    .same {
+        height: 200px;
+    }
+
+    .same>img,
+    p {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .heading,
+    .heading>h3 {
+        display: block;
+        width: 300px;
+        font-size: 70px;
+    }
+
+    h3 {
+        font-size: 30px !important;
+        width: 300px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .capture-2,
+    .capture-3 {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .acc {
+        display: block;
+        width: 100%;
+    }
+
+    .accordion-button {
+        font-size: 20px !important;
+        padding-left: 30px !important;
+        height: 100px !important;
+        border-top: 1px solid gray !important;
+        border-bottom: 1px solid gray !important;
+    }
+
+    .end {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: flex-start
+    }
+
+    .last-para {
+        font-size: 20px;
+        width: 100% !important;
+        text-align: center;
+        margin-top: 30px;
+
+    }
+
+    .follow-us {
+        display: flex;
+        height: 100px;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+    }
+
+    .follow {
+        font-size: 20px !important;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+
+    .follow-us>img {
+        width: 30px !important;
+        height: 40px;
+        margin: 20px;
+        position: relative;
+        left: 10px;
+        margin-top: 30px;
+    }
+
+    .last-button {
+        height: 200px;
+        text-align: center;
+    }
+
+    .last-button>img {
+        width: 150px;
+        height: 100px;
+    }
 }
 
 
 @media only screen and (max-width: 320px) {
-     body {
+    body {
         width: 100% !important;
-     }
+    }
 
-     .navbar{
+    .navbar {
         display: block !important;
-     }
-    .header-top{
-      width: 100% !important;
-      display: flex;
-      padding-left: 40px;
-  }
-  .hamb{
-    display: block !important;
-    position: absolute !important;
-    top: 10px;
-    left: 0;
-}
+    }
 
+    .nav-login-btn,
+    .nav-sell-btn {
+        background-color: #f7f8f8;
+        border: none !important;
+        font-size: 16px;
+        margin: 30px;
+    }
 
-      .hidden , #inp , .sel-div , .btn-div , .sell, .ul , ul>li ,.icon-2{
-      display: none;
-      }
-      .fa-car , .fa-building{
+    .nav-login-btn a,
+    .nav-sell-btn a {
+        text-decoration: none;
+    }
+
+    .header-top {
+        width: 100% !important;
+        display: flex;
+        padding-left: 40px;
+    }
+
+    .user {
+        position: absolute;
+        left: 5%;
+        top: 0%;
+        width: 80%;
+    }
+
+    .user p {
+        margin-top: 10px;
+        font-size: 15px;
+        width: 80% !important;
+    }
+
+    .user a button {
+        border: none;
+        width: 80px;
+        font-size: 15px !important;
+    }
+
+    .hidden,
+    #inp,
+    .sel-div,
+    .btn-div,
+    .sell,
+    .ul,
+    ul>li,
+    .icon-2 {
+        display: none;
+    }
+
+    .fa-car,
+    .fa-building {
         font-size: 12px;
-      }
-      .header{
-          width: 100%;
-          display: flex;
-          padding: 0;
-      }
-      .parent-inp{
-        width: 100%;
-      }
-   #input{
-      display: inline-block;
-      width: 100%;
-      height: 70px;
-      font-size: 15px;
-      padding-left: 30px;
-      border-radius: 10px;
-   }
+    }
 
-   /* .icon-2{
+    .header {
+        width: 100%;
+        display: flex;
+        padding: 0;
+    }
+
+    .parent-inp {
+        width: 100%;
+    }
+
+    #input {
+        display: inline-block;
+        width: 100%;
+        height: 70px;
+        font-size: 15px;
+        padding-left: 30px;
+        border-radius: 10px;
+    }
+
+    /* .icon-2{
     height: 70px;
     position: absolute;
     top: 65px;
     right: 15px;
  } */
 
- .search-bar{
-    height: 100%;
- }
+    .search-bar {
+        height: 100%;
+    }
 
- .card-div p{
-    width: 90% !important;
-    height: auto !important;
-    
- }
-  .capture> img{
-      width: 100%;
-      height: 200px;
-  }
-  .capture-2{
-      display: none;
-  }
-  
-  .h3> h3{
-   
-      font-size: 40px;
-      width: 250px;
-  }
-  
-  .items{
-     
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-y: scroll;
-      padding: 0;
+    .card-div p {
+        width: 90% !important;
+        height: auto !important;
 
-   }
-   .same{
-      height: 200px;
-   }
-   .same > img , p{
-      width: 50px !important;
-      height: 50px !important;
-   }
-   .heading , .heading > h3{
-      display: block;
-      width: 300px;
-      font-size: 70px;
-   }
-   h3{
-    font-size: 40px !important;
-      width: 300px;
-   }
-   .main{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      
-   }
-  
-  .capture-2 , .capture-3{
-      display: none;
-  }
-  
-  .footer{
-      display: none;
-  }
-  .acc{
-      display: block;
-      width: 100% ;
-  }
+    }
 
-  .accordion-button{
-      font-size: 20px !important;
-      padding-left: 30px !important;
-      height: 100px !important;
-      border-top: 1px solid gray !important;
-      border-bottom: 1px solid gray !important;
-  }
-  .end{
-      width: 100%;
-      height: 100px;
-      display: flex;
-      justify-content: flex-start
-  }
-  .last-para{
-      font-size: 20px;
-      width: 100% !important;
-      text-align: center;
-      margin-top: 30px;
-      
-  }
-  .follow-us{
-      display: flex;
-      height: 100px;
-      border-top: 1px solid gray;
-      border-bottom: 1px solid gray;
-  }
-  .follow{
-      font-size: 20px !important;
-      margin-left: 20px;
-      margin-top: 30px;
-  }
-  .follow-us> img{
-      width: 25px !important;
-      height: 30px;
-      margin: 10px;
-      position: relative;
-      left: 0;
-      margin-top: 30px;
-  }
+    .capture>img {
+        width: 100%;
+        height: 200px;
+    }
 
-  .last-button{
-      height: 200px;
-      text-align: center;
-  }
-  .last-button>img{
-      width: 150px;
-      height: 100px;
-  }
+    .capture-2 {
+        display: none;
+    }
+
+    .h3>h3 {
+
+        font-size: 40px;
+        width: 250px;
+    }
+
+    .items {
+
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        padding: 0;
+
+    }
+
+    .same {
+        height: 200px;
+    }
+
+    .same>img,
+    p {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .heading,
+    .heading>h3 {
+        display: block;
+        width: 300px;
+        font-size: 70px;
+    }
+
+    h3 {
+        font-size: 40px !important;
+        width: 300px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .capture-2,
+    .capture-3 {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .acc {
+        display: block;
+        width: 100%;
+    }
+
+    .accordion-button {
+        font-size: 20px !important;
+        padding-left: 30px !important;
+        height: 100px !important;
+        border-top: 1px solid gray !important;
+        border-bottom: 1px solid gray !important;
+    }
+
+    .end {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: flex-start
+    }
+
+    .last-para {
+        font-size: 20px;
+        width: 100% !important;
+        text-align: center;
+        margin-top: 30px;
+
+    }
+
+    .follow-us {
+        display: flex;
+        height: 100px;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+    }
+
+    .follow {
+        font-size: 20px !important;
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+
+    .follow-us>img {
+        width: 25px !important;
+        height: 30px;
+        margin: 10px;
+        position: relative;
+        left: 0;
+        margin-top: 30px;
+    }
+
+    .last-button {
+        height: 200px;
+        text-align: center;
+    }
+
+    .last-button>img {
+        width: 150px;
+        height: 100px;
+    }
 }
- 

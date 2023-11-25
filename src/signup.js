@@ -15,23 +15,41 @@ signUpBtn.addEventListener('click' , ()=> {
     const confirmPassword = inputField[5]
 
     if(!fullName.value || !fatherName.value || !email.value || !password.value || !confirmPassword.value){
-      alert('Please Fill All Fields')
+      Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "Please Fill All Fields",
+});
       return
   }
 
   if(password.value !== confirmPassword.value){
-      alert('Both passwords are not same')
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Both Passwords Are Not Same",
+      });
       return
   }
 
   if(fullName.value.length < 3){
-      alert('Please Enter Your Name with minimum 3 letters')
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please Enter Your Name with minimum 3 letters",
+      });
       return
+      
   }
 
   if(fatherName.value.length < 3){
-      alert('Please Enter Your Fathername with minimum 3 letters')
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please Enter Your Father Name with minimum 3 letters",
+      });
       return
+      
   }
 
   const user = {

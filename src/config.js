@@ -21,6 +21,7 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 
 
+
  function register(user){
    const {fullName, email , password, contact} = user
 
@@ -48,7 +49,11 @@ const storage = getStorage(app);
       console.error("Error adding document: ", e);
     }
     const user = userCredential.user;
-    alert('Sign Up Successfull')
+    Swal.fire({
+      icon: "success",
+      title: "Oops...",
+      text: "Sign Up Succeessfull",
+    });
     window.location.href = './signin.html'
   })
   .catch((error) => {
@@ -69,7 +74,11 @@ signInWithEmailAndPassword(auth, email, password)
     
     const user = userCredential.user;
     console.log(user);
-    alert('Log in Successfull')
+    Swal.fire({
+      icon: "success",
+      title: "Good job!",
+      text: "Log In Succeessfull",
+    });
     window.location.href = '../index.html'
   })
   .catch((error) => {
@@ -96,7 +105,11 @@ signInWithEmailAndPassword(auth, email, password)
 
 
     const docRef = await addDoc(collection(db, "adds"), add)
-    alert('data added successful');
+    Swal.fire({
+      title: "Good job!",
+      text: "Your Post Add Successful!",
+      icon: "success"
+    });
     
       changeLocation()
   
@@ -171,10 +184,10 @@ querySnapshot.forEach((doc) => {
   const uid = doc.id
   add.id = uid
   adds.push(add)
-  console.log(doc.id, " => ", doc.data());
+  // console.log(doc.id, " => ", doc.data());
   
 });
-console.log(adds);
+// console.log(adds);
 return adds
 
 
