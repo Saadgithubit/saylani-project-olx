@@ -9,26 +9,37 @@ addsDetails()
    const container = document.getElementById('products-details')
    const ad = await getSingleAdd(id)
     const user = await getUser(ad.uid)
-   console.log(ad);
+  //  console.log(ad);
 
    const loader = document.getElementById('loader')
-           loader.className = 'hide'
+   const topHeader = document.getElementById('header-top')
+   const header = document.getElementById('header')
+   loader.className = 'hide'
+   topHeader.style.display = 'flex'
+   header.style.display = 'flex'
+   const name = document.getElementById('name')
+   const email = document.getElementById('email')
+   const contact = document.getElementById('contact')
+   name.innerHTML = user.fullName
+   email.innerHTML = user.email
+   contact.innerHTML = user.contact
+  //  console.log(topHeader ,header);
 
      console.log(user);
-    const card = document.createElement('div')
+    
     const img = document.createElement('img')
   img.src = ad.img
   const title = document.createElement('h3')
   title.innerHTML = ad.title
   const amount = document.createElement('h4')
-  amount.innerHTML = ad.amount
+  amount.innerHTML = `Rs ${ad.amount}` 
   const description = document.createElement('p')
+  description.className = 'description'
   description.innerHTML = ad.description
-  card.append(img)
-  card.append(title)
-  card.append(amount)
-  card.append(description)
-  container.append(card)
+  container.append(img)
+  container.append(title)
+  container.append(amount)
+  container.append(description)
 
 
 

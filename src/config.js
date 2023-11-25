@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
-import{ getFirestore , collection,  addDoc, setDoc, getDocs, doc, getDoc} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"
+import{ getFirestore , collection,  addDoc, setDoc,query, where, getDocs, doc, getDoc} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"
 import { getStorage , ref, uploadBytes, getDownloadURL,  }
  from "https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js"
 
@@ -22,7 +22,7 @@ const storage = getStorage(app);
 
 
  function register(user){
-   const {fullName, email , password} = user
+   const {fullName, email , password, contact} = user
 
    const userCredential = createUserWithEmailAndPassword(auth, email, password)
   
@@ -39,7 +39,8 @@ const storage = getStorage(app);
 
         fullName, 
         email,
-        password
+        password,
+        contact
 
       })
       console.log("Document written with ID: ", docRef.id);
@@ -159,6 +160,26 @@ if (docSnap.exists()) {
   }
 }
 
+async function getUserAdds(uid){
+
+  const adsRef = collection(db, "adds")
+  const querySnapshot = await getDocs(query(adsRef, where("uid", "==", uid)))
+  const adds = []
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  const add = doc.data()
+  const uid = doc.id
+  add.id = uid
+  adds.push(add)
+  console.log(doc.id, " => ", doc.data());
+  
+});
+console.log(adds);
+return adds
+
+
+}
+
 
 
  export{
@@ -169,5 +190,6 @@ if (docSnap.exists()) {
   addPostToDb,
   getAllAdds,
   getSingleAdd,
-  getUser
+  getUser,
+  getUserAdds
  }

@@ -1,6 +1,8 @@
 import { register } from './config.js'
 
+const inputField = document.getElementsByTagName('input')
 
+console.log(inputField);
 const signUpBtn = document.getElementById('signUp-btn')
 // console.log(signUpBtn);
 signUpBtn.addEventListener('click' , ()=> {
@@ -8,8 +10,9 @@ signUpBtn.addEventListener('click' , ()=> {
     const fullName = inputField[0]
     const fatherName = inputField[1]
     const email = inputField[2]
-    const password =inputField[3]
-    const confirmPassword = inputField[4]
+    const contact = inputField[3]
+    const password =inputField[4]
+    const confirmPassword = inputField[5]
 
     if(!fullName.value || !fatherName.value || !email.value || !password.value || !confirmPassword.value){
       alert('Please Fill All Fields')
@@ -34,7 +37,8 @@ signUpBtn.addEventListener('click' , ()=> {
   const user = {
     fullName: fullName.value,
     email: email.value,
-    password: password.value
+    password: password.value,
+    contact: contact.value
   }
 
 

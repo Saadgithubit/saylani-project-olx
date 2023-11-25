@@ -1,4 +1,4 @@
-import {auth , onAuthStateChanged} from './src/config.js'
+import {auth , onAuthStateChanged, getUser} from './src/config.js'
 import { getAllAdds } from "./src/config.js"
 
 function changeLocation(){
@@ -20,13 +20,16 @@ changeLocation()
 
 
 
-onAuthStateChanged(auth,  (user) => {
+onAuthStateChanged(auth, async (user) => {
   if (user) {
     
     const uid = user.uid;
+    const userUid = await getUser(uid)
     // console.log(user);
+    // console.log(uid);
+    console.log('userUid ->' , userUid.fullName);
     const emailElement = document.getElementById('userId')
-    emailElement.innerHTML = user.email
+    emailElement.innerHTML = `Welcome ${userUid.fullName}`
     // console.log(emailElement);
     renderAdds()
     
@@ -42,7 +45,7 @@ async function renderAdds(){
   
   // const container = document.getElementById('container')
   // console.log(container);
-  console.log(allAdds);
+  // console.log(allAdds);
   const container = document.getElementById('allProducts')
 
   for(var i = 0 ; i < allAdds.length; i++){

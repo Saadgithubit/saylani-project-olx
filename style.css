@@ -13,6 +13,10 @@ body , html{
 .container-fluid{
     width: 100% !important;
 }
+
+.navbar{
+    display: none !important;
+ }
 .header-top{
     display: flex;
     padding: 20px;
@@ -100,7 +104,7 @@ body , html{
     background-color: skyblue;
     color: white;
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.1);
    
 }
 
@@ -115,10 +119,40 @@ body , html{
     border-left-color: blue;
 }
 
+.user{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+}
 
+.user p{
+    font-size: 25px;
+    width: 30%;
+    margin-top: 10px;
+}
 
+.user a button{
+    width: 120px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f7f8f8;
+    color: black;
+}
+.user a button:hover{
+    background-color: black;
+    color: white;
+}
+.user button a{
+    text-decoration: none;
+    border: 1px solid black;
+}
+/* .user button a:hover{
+    color: white;
+
+} */
 /* ......................................Nav-Bar........................................ */
-.navbar> ul{
+.nav-bar> ul{
     display: flex;
 }
 ul> li{
@@ -300,11 +334,15 @@ ul> li:hover{
    
 }
 
-@media only screen and (min-width: 420px) and (max-width: 768px) {
+@media only screen and (min-width: 426px) and (max-width: 768px) {
 
     body{
         width: 100% !important;
     }
+
+    .navbar{
+        display: block !important;
+     }
      .header-top{
         width: 100% ;
         display: flex;
@@ -317,7 +355,7 @@ ul> li:hover{
         top: 10px;
         left: 20px;
     }
-        .hidden , .sel-div , .btn-div , .sell, .ul , ul>li{
+        .hidden , .sel-div , .btn-div , .sell, .ul , ul>li, .icon-2{
         display: none;
         }
         .header{
@@ -337,12 +375,12 @@ ul> li:hover{
         border-radius: 10px;
      }
 
-     .icon-2{
+     /* .icon-2{
         height: 70px;
         position: absolute;
         top: 65px;
         right: 30px;
-     }
+     } */
 
      .search-bar{
         height: 100%;
@@ -476,6 +514,10 @@ ul> li:hover{
     body{
         width: 100% !important;
      }
+
+     .navbar{
+        display: block !important;
+     }
      
   .header-top{
       display: flex;
@@ -490,7 +532,7 @@ ul> li:hover{
     left: 20px;
 }
 
-      .hidden , #inp , .sel-div , .btn-div , .sell, .ul , ul>li{
+      .hidden , #inp , .sel-div , .btn-div , .sell, .ul , ul>li , .icon-2{
       display: none;
       }
       .header{
@@ -510,12 +552,12 @@ ul> li:hover{
       border-radius: 10px;
      
    }
-   .icon-2{
+   /* .icon-2{
     height: 70px;
     position: absolute;
     top: 65px;
     right: 15px;
- }
+ } */
  
  .search-bar{
     height: 100%;
@@ -643,6 +685,10 @@ ul> li:hover{
      body {
         width: 100% !important;
      }
+
+     .navbar{
+        display: block !important;
+     }
     .header-top{
       width: 100% !important;
       display: flex;
@@ -656,7 +702,7 @@ ul> li:hover{
 }
 
 
-      .hidden , #inp , .sel-div , .btn-div , .sell, .ul , ul>li{
+      .hidden , #inp , .sel-div , .btn-div , .sell, .ul , ul>li ,.icon-2{
       display: none;
       }
       .fa-car , .fa-building{
@@ -679,12 +725,12 @@ ul> li:hover{
       border-radius: 10px;
    }
 
-   .icon-2{
+   /* .icon-2{
     height: 70px;
     position: absolute;
     top: 65px;
     right: 15px;
- }
+ } */
 
  .search-bar{
     height: 100%;

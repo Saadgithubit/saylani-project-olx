@@ -1,41 +1,263 @@
-#products-details{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
     width: 100%;
+}
+.header-top{
+    display: flex;
+    padding: 20px;
+    padding-left: 0 0 0 20px;
+    word-spacing: 5px;
+    background-color: #f7f8f8;
+    width: 100%;
+    display: none;
+}
+
+.fa-car , .fa-building{
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    margin-left: 30px;
+}
+.header-a> a , .header-a2 > a{
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    padding: 10px;
+    background-color: #f7f8f8;
+    width: 100%;
+    display: none;
+
+}
+
+.sel-div{
+    width: 20%;
+}
+
+#inp{
+    width: 100%;
+    height: 50px;
+    border: 2px solid black;
+    padding-left: 30px;
+    border-radius: 5px;
+}
+.icon{
+    position: relative;
+    top: -38px;
+    left: 10px;
+}
+.fa-magnifying-glass{
+    width: 20px;
+    height: 20px;
+    
+}
+#input{
+    width: 500px;
+    height: 50px;
+    border: 2px solid black;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+.icon-2{
+    display: inline-block;
+    position: relative;
+    right: 55px;
+    bottom: 3px;
+
+}
+.search-bar{
+    width: 50px;
+    height: 50px;
+    
+}
+
+
+#logIn-button{
+
+    border: 1px solid black ;
+    position: relative;
+    right: 20px;
+    transition: all 0.5s ease-in;
+}
+
+#logIn-button:hover{
+    background-color: skyblue;
+    color: white;
+    opacity: 1;
+    transform: scale(1.1);
+   
+}
+
+
+.sell{
+    width: 110px;
+    height: 50px;
+    border: 5px solid black;
+    border-radius: 20px;
+    border-top-color: aqua;
+    border-right-color: yellow;
+    border-left-color: blue;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: black;
+}
+
+#products-details{
+    width: 60%;
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px;
-    /* justify-content: center; */
 }
 
-.images{
-    width: 800px !important;
-    height: 350px;
+
+#products-details img{
+    width: 90%;
+    height: 450px;
     
 }
-#products-details h3 , h4{
+#products-details h3 {
+    color: #FF6801;
     font-size: 40px;
     margin: 10px;
     
 }
 
+#products-details h4{
+    font-size: 40px;
+    color: #1C88B3;
+}
+
 .description {
-    font-size: 30px;
-    border: 1px solid black;
+    font-size: 25px;
     font-weight: 500;
     width: auto;
     height: auto;
-    margin-top: 20px
+    margin-top: 20px;
+    color: white;
 }
 
-.span{
-    color: rgb(8, 99, 134);
+.right{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 500px;
+    margin-left: 30px;
+
+}
+
+.right h2{
+    height: 80px;
+    color: #2fadbb;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.right h3{
+    color: #1C88B3;
+    margin-left: 20px;
+}
+.right p{
+    font-size: 20px;
+    margin-left: 20px;
+    font-style: italic;
+    color: white;
+
 }
 
 .hide{
     display: none;
 }
 
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    
+    .header-top{
+        width: 100% ;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0;
+    }
+
+    .header{
+        width: 100%;
+        display: flex;
+        padding: 0;
+    }
+    
+    .sel-div , .btn-div , .sell, .header{
+        display: none !important;
+        }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    #products-details{
+        width: 100%;
+    }
+
+    .right{
+        width: 100%;
+        border: 1px solid white;
+        margin: auto
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .header-top{
+        width: 100% ;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0;
+    }
+
+    .header{
+        width: 100%;
+        display: flex;
+        padding: 0;
+    }
+    
+    .sel-div , .btn-div , .sell, .header{
+        display: none !important;
+        }
+
+       
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    #products-details{
+        width: 100%;
+    }
+
+    .right{
+        width: 100%;
+        border: 1px solid white;
+        margin: auto
+    }
+
+}
+/* 
+
+.span{
+    color: rgb(8, 99, 134);
+}
 .cart{
     display: flex;
 }
@@ -65,4 +287,4 @@
     height: 60px;
     margin-left: 50px;
 
-}
+} */
