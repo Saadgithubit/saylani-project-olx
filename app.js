@@ -75,6 +75,17 @@ async function renderAdds(){
 }
 
 }
+
+window.sortBy = function(e){
+  const sortedValue = e.target.value
+  if(!sortedValue){
+    renderAdds()
+  }else{
+    const adds = sortAdds()
+  }
+  
+  console.log();
+}
 // console.log(auth,getUser);
 
 // getData()
