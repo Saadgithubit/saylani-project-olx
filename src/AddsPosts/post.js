@@ -29,17 +29,6 @@ addPostToDb(add)
 inCss()
 function inCss(){
 
-let liElements = document.getElementsByTagName('li')
-let categories = document.getElementById('categories')
-let form = document.getElementById('form')
-for(var i = 0; i < liElements.length; i++){
-     liElements[i].addEventListener('click' , ()=>{
-    //    console.log(liElements[i].childNodes);
-        categories.className = 'hide'
-        form.className = 'form'
-     })
-}
-
 let inputElements = document.getElementsByTagName('input')
 let img = inputElements[3]
 let image = document.getElementById('image')
