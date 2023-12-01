@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
-import{ getFirestore , collection,  addDoc, setDoc,query, where, getDocs, doc, getDoc} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"
+import{ getFirestore , collection,  addDoc, setDoc,query, where, getDocs, doc, getDoc,orderBy} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"
 import { getStorage , ref, uploadBytes, getDownloadURL,  }
  from "https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js"
 
@@ -193,6 +193,20 @@ return adds
 
 }
 
+async function sortAdds(sortedValue){
+  const adsRef = collection(db, "adds")
+  const querySnapshot = await getDocs(query(adsRef, orderBy('amount', sortedValue)))
+  const allAdds = []
+  querySnapshot.forEach((doc) => {
+      const ad = doc.data()
+      allAdds.id = doc.id
+
+      allAdds.push(ad)
+  });
+
+  return allAdds
+}
+
 
 
  export{
@@ -204,5 +218,6 @@ return adds
   getAllAdds,
   getSingleAdd,
   getUser,
-  getUserAdds
+  getUserAdds,
+  sortAdds
  }

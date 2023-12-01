@@ -24,6 +24,7 @@
     <div class="bg-light shadow-3 p-4">
       <button class="nav-login-btn"><a href="./src/signin.html">log In</a></button>
       <button class="nav-sell-btn"><a href="./src/AddsPosts/post.html">Sell</a></button>
+      <button class="nav-sell-btn"><a href="./src/useradds/useradd.html">My Adds</a></button>
     </div>
   </div>
 
@@ -39,16 +40,11 @@
     <div class="header-a2">
      <a href=""><i class="fa-regular fa-building"></i> PROPERTY</a>
     </div>
-    <div class="user">
-      <p id="userId"></p>
-  
-     <a href="./src/useradds/useradd.html"><button>My Adds</button></a>
-    </div>
     </div>
 
   
   <div class="header">
-    <div>
+    <div class="olx-img">
         <img src="./Images/Capture 2.PNG" class="hidden" alt="">
     </div>
 
@@ -68,7 +64,14 @@
     </div>
     <div class="btn-div">
       <button  id="logIn-button">Log-In</button>
-    <a href=""></a>
+      <div class="dropdown" id="userName">
+        <button class="dropdown-toggle user" id="userId" data-bs-toggle="dropdown" aria-expanded="false">
+          
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="./src/useradds/useradd.html">My Adds</a></li>
+        </ul>
+      </div>
         <button class="sell" id="sell-btn"> <b> +Sell </b></button>
     </div>
   </div>
@@ -182,6 +185,7 @@
     <p>Kids</p>
 </div>
   </div>
+
 
   <div class="sort-div">
     <h3>Filter</h3>

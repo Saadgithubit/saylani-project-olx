@@ -44,39 +44,6 @@ html {
     color: black;
 }
 
-.user {
-    width: 70%;
-    margin-left: 40px;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.user p {
-    font-size: 25px;
-    width: 50%;
-}
-
-
-.user a button {
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #f7f8f8;
-    color: black;
-}
-
-.user a button:hover {
-    background-color: black;
-    color: white;
-}
-
-.user button a {
-    text-decoration: none;
-    border: 1px solid black;
-}
 
 .header {
     display: flex;
@@ -89,6 +56,11 @@ html {
 
 .sel-div {
     width: 20%;
+}
+
+.btn-div{
+    width: 20%;
+    display: flex;
 }
 
 #inp {
@@ -122,9 +94,15 @@ html {
 .icon-2 {
     display: inline-block;
     position: relative;
-    right: 55px;
+    height: 50px;
+    right: 51px;
     bottom: 3px;
 
+}
+.icon-2 img{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 2px;
 }
 
 .search-bar {
@@ -151,10 +129,16 @@ html {
 
 }
 
+.user{
+    height: 50px;
+    border-radius: 10px;
+}
+
 
 .sell {
     width: 110px;
     height: 50px;
+    margin-left: 10px;
     border: 5px solid black;
     border-radius: 20px;
     border-top-color: aqua;
@@ -220,8 +204,8 @@ ul>li:hover {
 
 .card-div {
     width: 300px;
-    height: auto;
-    margin: 20px;
+    height: 300px;
+    margin: 10px;
     border: 1px solid gray;
     border-radius: 20px;
     padding: 20px;
@@ -236,8 +220,7 @@ ul>li:hover {
 
 .card-div img {
     border-bottom: 1px solid black;
-    padding: 20px;
-    background-color: rgb(215, 220, 222);
+    background: transparent;
     width: 100%;
     height: 150px;
 }
@@ -266,6 +249,7 @@ p {
 
 #allProducts h5 {
     color: #FF6801;
+    margin-top: 20px;
 
 }
 
@@ -384,8 +368,8 @@ p {
 
     .icon-2 {
         position: relative;
-        top: -49.5px;
-        left: 340px;
+        bottom: 50px;
+        left: 345px;
     }
 
 
@@ -443,8 +427,8 @@ p {
     .btn-div,
     .sell,
     .ul,
-    ul>li,
-    .icon-2 {
+    ul>li
+     {
         display: none;
     }
 
@@ -467,6 +451,13 @@ p {
         border-radius: 10px;
     }
 
+    .icon-2{
+        position: relative;
+        left: 619px;
+        bottom: 70px;
+        height: 70px;
+    }
+
     /* .icon-2{
         height: 70px;
         position: absolute;
@@ -476,6 +467,10 @@ p {
 
     .search-bar {
         height: 100%;
+    }
+    .sort-div h3{
+        font-size: 23px !important;
+        margin-left: 20px;
     }
 
     #allProducts {
@@ -673,8 +668,8 @@ p {
     .btn-div,
     .sell,
     .ul,
-    ul>li,
-    .icon-2 {
+    ul>li
+    {
         display: none;
     }
 
@@ -698,18 +693,25 @@ p {
 
     }
 
-    /* .icon-2{
-    height: 70px;
-    position: absolute;
-    top: 65px;
-    right: 15px;
- } */
+    .icon-2{
+        position: relative;
+        left: 351px;
+        bottom: 70px;
+        height: 70px;
+    }
 
     .search-bar {
         height: 100%;
     }
 
+    .sort-div h3{
+        font-size: 23px !important;
+        margin-left: 20px;
+    }
 
+    .sort-div select{
+        width: 25%;
+    }
     #allProducts {
         justify-content: center;
     }
@@ -897,8 +899,8 @@ p {
     .btn-div,
     .sell,
     .ul,
-    ul>li,
-    .icon-2 {
+    ul>li
+    {
         display: none;
     }
 
@@ -926,15 +928,24 @@ p {
         border-radius: 10px;
     }
 
-    /* .icon-2{
-    height: 70px;
-    position: absolute;
-    top: 65px;
-    right: 15px;
- } */
+    .icon-2{
+        position: relative;
+        left: 249px;
+        bottom: 70px;
+        height: 70px;
+    }
 
     .search-bar {
         height: 100%;
+    }
+
+    .sort-div h3{
+        font-size: 23px !important;
+        margin-left: 20px;
+    }
+
+    .sort-div select{
+        width: 35%;
     }
 
     .card-div p {

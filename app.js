@@ -1,5 +1,5 @@
 import {auth , onAuthStateChanged, getUser} from './src/config.js'
-import { getAllAdds } from "./src/config.js"
+import { getAllAdds, sortAdds } from "./src/config.js"
 
 function changeLocation(){
 const logInBtn = document.getElementById('logIn-button')
@@ -22,31 +22,29 @@ changeLocation()
 
 onAuthStateChanged(auth, async (user) => {
   if (user) {
-    
+    const userName = document.getElementById('userName')
+    const logInBtn = document.getElementById('logIn-button')
+
+    logInBtn.style.display = 'none'
+    userName.style.display = 'block'
+
+    console.log(userName);
     const uid = user.uid;
     const userUid = await getUser(uid)
     // console.log(user);
     // console.log(uid);
-    console.log('userUid ->' , userUid.fullName);
+    // console.log('userUid ->' , userUid.fullName);
     const emailElement = document.getElementById('userId')
-    emailElement.innerHTML = `Welcome ${userUid.fullName}`
+    emailElement.innerHTML = `${userUid.fullName}`
     // console.log(emailElement);
     renderAdds()
     
   }
 });
 
-
-
-
-async function renderAdds(){
-  
-  const allAdds = await getAllAdds()
-  
-  // const container = document.getElementById('container')
-  // console.log(container);
-  // console.log(allAdds);
+function renderAddsItems(allAdds){
   const container = document.getElementById('allProducts')
+  container.innerHTML = ''
 
   for(var i = 0 ; i < allAdds.length; i++){
   const ad =  allAdds[i] 
@@ -69,22 +67,35 @@ async function renderAdds(){
   card.append(amount)
   card.append(title)
   container.append(card)
-  console.log(ad);
+  // console.log(ad);
 
   
 }
+}
+
+
+async function renderAdds(){
+  
+  const allAdds = await getAllAdds()
+  
+  // const container = document.getElementById('container')
+  // console.log(container);
+  // console.log(allAdds);
+ renderAddsItems(allAdds)
 
 }
 
-window.sortBy = function(e){
+window.sortBy = async function(e){
   const sortedValue = e.target.value
 
   console.log(sortedValue);
-  // if(!sortedValue){
-  //   renderAdds()
-  // }else{
-  //   const adds = sortAdds()
-  // }
+  if(!sortedValue){
+    renderAdds()
+  }else{
+    const allAdds = await sortAdds(sortedValue)
+
+    renderAddsItems(allAdds)
+  }
   
 }
 // console.log(auth,getUser);
