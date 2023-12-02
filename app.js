@@ -1,4 +1,4 @@
-import {auth , onAuthStateChanged, getUser} from './src/config.js'
+import {auth , onAuthStateChanged, getUser, logout} from './src/config.js'
 import { getAllAdds, sortAdds } from "./src/config.js"
 
 function changeLocation(){
@@ -102,8 +102,12 @@ window.sortBy = async function(e){
   }
   
 }
-// console.log(auth,getUser);
 
+const signOutBtn = document.getElementById('signout')
+// console.log(signOutBtn);
+signOutBtn.addEventListener('click',()=>{
+  logout()
+})
 // getData()
 
 // function getData(){

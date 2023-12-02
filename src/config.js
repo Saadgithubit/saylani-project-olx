@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
+import { getAuth, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 import{ getFirestore , collection,  addDoc, setDoc,query, where, getDocs, doc, getDoc,orderBy} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"
 import { getStorage , ref, uploadBytes, getDownloadURL,  }
  from "https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js"
@@ -89,6 +89,11 @@ signInWithEmailAndPassword(auth, email, password)
     console.log("errorMessage =>" , errorMessage);
   });
  }
+
+ 
+function logout() {
+  return signOut(auth)
+}
 
  async function addPostToDb(add){
   try {
@@ -219,5 +224,6 @@ async function sortAdds(sortedValue){
   getSingleAdd,
   getUser,
   getUserAdds,
-  sortAdds
+  sortAdds,
+  logout
  }
