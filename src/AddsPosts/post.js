@@ -8,7 +8,7 @@ btn.addEventListener('click' , async()=> {
     const inputElements = document.getElementsByTagName('input')
     const title = inputElements[0].value
     const description = inputElements[1].value
-    const amount = inputElements[2].value
+    const amount = +inputElements[2].value
     const img = inputElements[3].files[0]
     const date = new Date()
     console.log(uid);
