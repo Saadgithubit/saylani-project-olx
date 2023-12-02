@@ -39,6 +39,10 @@ onAuthStateChanged(auth, async (user) => {
     // console.log(emailElement);
     renderAdds()
     
+  }else{
+    userName.style.display = 'none'
+    logInBtn.style.display = 'block'
+    renderAdds()
   }
 });
 
