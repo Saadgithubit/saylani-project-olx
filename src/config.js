@@ -54,7 +54,10 @@ const storage = getStorage(app);
       title: "Oops...",
       text: "Sign Up Succeessfull",
     });
-    window.location.href = './signin.html'
+    function goToSignIn(){
+      window.location.href = './signin.html'
+    }
+    setTimeout(goToSignIn,3000)
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -79,7 +82,10 @@ signInWithEmailAndPassword(auth, email, password)
       title: "Good job!",
       text: "Log In Succeessfull",
     });
+    function goToDashboard(){
     window.location.href = '../index.html'
+  }
+  setTimeout(goToDashboard,3000)
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -116,7 +122,7 @@ function logout() {
       icon: "success"
     });
     
-      changeLocation()
+      setTimeout(changeLocation,3000)
   
   } catch (e) {
     console.log("Error adding document: ", e);

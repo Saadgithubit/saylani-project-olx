@@ -10,11 +10,12 @@ addsDetails()
    const ad = await getSingleAdd(id)
     const user = await getUser(ad.uid)
   //  console.log(ad);
-
+   const allDetailsCode = document.getElementById('detail-code')
    const loader = document.getElementById('loader')
    const topHeader = document.getElementById('header-top')
    const header = document.getElementById('header')
    loader.className = 'hide'
+   allDetailsCode.className = ''
    topHeader.style.display = 'flex'
    header.style.display = 'flex'
    const name = document.getElementById('name')
@@ -32,18 +33,31 @@ addsDetails()
   const title = document.createElement('h3')
   title.innerHTML = ad.title
   const amount = document.createElement('h4')
-  amount.innerHTML = `Rs ${ad.amount}` 
+  amount.innerHTML = `Rs ${ad.amount} <div><i class="fa-solid fa-share-nodes"></i> <i class="fa-regular fa-heart"></i></div>` 
   const description = document.createElement('p')
   description.className = 'description'
   description.innerHTML = ad.description
   container.append(img)
-  container.append(title)
   container.append(amount)
+  container.append(title)
   container.append(description)
 
+img.addEventListener('click' , async()=>{
+  container.innerHTML = ''
+  const body = document.querySelector('body')
+  body.innerHTML = ''
+  const image = document.createElement('img')
+  image.style.width = '200px'
+  image.src = ad.img
+  container.append(image)
+  body.append(container)
+  container.style.width = '100%'
+  container.style.height = '700px'
+  image.style.width = '100%'
+  image.style.padding = '0'
 
+})
 
-    // console.log(ad);
     
     
  }

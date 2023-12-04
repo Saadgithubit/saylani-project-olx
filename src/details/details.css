@@ -115,7 +115,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    background-color: black;
 }
 
 #products-details{
@@ -124,61 +123,79 @@ body{
     display: flex;
     flex-direction: column;
     padding: 20px;
+    border: 1px solid gray;
 }
 
 
 #products-details img{
-    width: 90%;
+    border: 1px solid black;
+    width: 100%;
+    background-color: black;
+    padding: 40px;
     height: 450px;
     
 }
+
 #products-details h3 {
-    color: #FF6801;
-    font-size: 40px;
-    margin: 10px;
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(49, 47, 47);
+    font-size: 30px;    
 }
 
 #products-details h4{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
     font-size: 40px;
-    color: #1C88B3;
+    color: rgb(26, 24, 24);
+
+}
+
+#products-details h4 div{
+    width: 15%;
+    word-spacing: 10px;
+    font-size: 25px;
+    color: black;
 }
 
 .description {
-    font-size: 25px;
+    font-size: 23px;
+    font-style: italic;
     font-weight: 500;
     width: auto;
     height: auto;
     margin-top: 20px;
-    color: white;
 }
 
 .right{
     width: 30%;
+    border: 1px solid gray;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 500px;
+    height: 350px;
+    margin-top: 40px;
     margin-left: 30px;
 
 }
 
 .right h2{
-    height: 80px;
-    color: #2fadbb;
-    padding-top: 10px;
+    height: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 1px solid gray;
     padding-left: 20px;
+    font-size: 22px;
 }
 .right h3{
-    color: #1C88B3;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
     margin-left: 20px;
+    font-size: 18px;
 }
 .right p{
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 20px;
     font-style: italic;
-    color: white;
-
 }
 
 .hide{
@@ -261,9 +278,9 @@ body{
     }
 
     .right{
-        width: 100%;
-        border: 1px solid white;
-        margin: auto
+        width: 90%;
+        border: 1px solid gray;
+        margin-top: 10px
     }
 
     .footer {
@@ -359,11 +376,25 @@ body{
         width: 100%;
     }
 
+    #products-details img{
+        padding: 20px;
+    }
+
+    #products-details h4 div{
+        width: 20%;
+    }
+
+    .description{
+        font-size: 20px;
+    }
+
     .right{
         width: 100%;
-        border: 1px solid white;
-        margin: auto
+        margin: 0;
+        border: 1px solid gray;
+        margin-top: 10px
     }
+
     .footer {
         display: none;
     }
@@ -432,6 +463,9 @@ body{
 
 @media only screen and (max-width: 320px) {
 
+    #products-details h4 div{
+        width: 30%;
+    }
     .footer {
         display: none;
     }

@@ -42,7 +42,6 @@ onAuthStateChanged(auth, async (user) => {
   }else{
     userName.style.display = 'none'
     logInBtn.style.display = 'block'
-    renderAdds()
   }
 });
 

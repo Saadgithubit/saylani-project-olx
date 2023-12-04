@@ -13,8 +13,10 @@ async function myAdds() {
 
    const userId = await auth.currentUser.uid;
    const allAdds = await getUserAdds(userId)
+   const allMyadsDetails = document.getElementById('all-myadds-code')
    const loader = document.getElementById('loader')
    loader.className = 'hide'
+   allMyadsDetails.className = ''
    const container = document.getElementById('container')
    console.log(allAdds);
 
