@@ -23,7 +23,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    padding-left: 0 0 0 20px;
+    padding-left: 30px;
     word-spacing: 5px;
     background-color: #f7f8f8;
     width: 100%;
@@ -49,7 +49,7 @@ html {
     display: flex;
     justify-content: space-around;
     height: 80px;
-    padding: 10px;
+    padding: 10px 10px 10px 0;
     background-color: #f7f8f8;
     width: 100%;
 }
@@ -154,8 +154,15 @@ html {
 
 } */
 /* ......................................Nav-Bar........................................ */
+.nav-bar{
+    margin-top: 10px;
+}
 .nav-bar>ul {
     display: flex;
+}
+
+.Categories{
+    margin: 15px 15px 15px -12px;
 }
 
 ul>li {
@@ -174,8 +181,8 @@ ul>li:hover {
 
 }
 
-.capture-2 {
-    text-align: center;
+.carousel-item{
+    height: 100%;
 }
 
 /* .............................................products................................... */
@@ -468,6 +475,14 @@ p {
     .search-bar {
         height: 100%;
     }
+
+    .carousel-inner{
+        height: 200px;
+    }
+
+    .carousel-inner .carousel-item img{
+        height: 100%;
+    }
     .sort-div h3{
         font-size: 23px !important;
         margin-left: 20px;
@@ -686,7 +701,7 @@ p {
     #input {
         display: inline-block;
         width: 100%;
-        height: 70px;
+        height: 60px;
         font-size: 20px;
         padding-left: 40px;
         border-radius: 10px;
@@ -696,8 +711,16 @@ p {
     .icon-2{
         position: relative;
         left: 351px;
-        bottom: 70px;
-        height: 70px;
+        bottom: 60px;
+        height: 60px;
+    }
+
+    .carousel-inner{
+        height: 180px;
+    }
+
+    .carousel-inner .carousel-item img{
+        height: 100%;
     }
 
     .search-bar {
@@ -845,6 +868,16 @@ p {
     }
 }
 
+@media only screen and (max-width: 375px){
+    #input{
+        font-size: 17px;
+        padding-left: 30px;
+    }
+    .icon-2{
+        left: 305px;
+    }
+}
+
 
 @media only screen and (max-width: 320px) {
     body {
@@ -922,7 +955,7 @@ p {
     #input {
         display: inline-block;
         width: 100%;
-        height: 70px;
+        height: 60px;
         font-size: 15px;
         padding-left: 30px;
         border-radius: 10px;
@@ -931,8 +964,15 @@ p {
     .icon-2{
         position: relative;
         left: 249px;
-        bottom: 70px;
-        height: 70px;
+        bottom: 60px;
+        height: 60px;
+    }
+    .carousel-inner{
+        height: 160px;
+    }
+
+    .carousel-inner .carousel-item img{
+        height: 100%;
     }
 
     .search-bar {
