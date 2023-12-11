@@ -49,9 +49,15 @@ const storage = getStorage(app);
       console.error("Error adding document: ", e);
     }
     const user = userCredential.user;
+    const body = document.getElementsByTagName('body')
+    for(var i = 0; i < body.length; i++){
+      console.log(body[i]);
+      body[i].style.opacity = '0.5'
+     
+    }
     Swal.fire({
       icon: "success",
-      title: "Oops...",
+      title: "Good job!",
       text: "Sign Up Succeessfull",
     });
     function goToSignIn(){
@@ -76,6 +82,12 @@ signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     
     const user = userCredential.user;
+    const body = document.getElementsByTagName('body')
+    for(var i = 0; i < body.length; i++){
+      console.log(body[i]);
+      body[i].style.opacity = '0.5'
+     
+    }
     console.log(user);
     Swal.fire({
       icon: "success",

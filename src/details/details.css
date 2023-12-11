@@ -139,20 +139,21 @@ body{
 #products-details h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(49, 47, 47);
-    font-size: 30px;    
+    font-size: 27px;
+    margin-top: 10px;    
 }
 
 #products-details h4{
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    font-size: 40px;
+    font-size: 35px;
     color: rgb(26, 24, 24);
 
 }
 
 #products-details h4 div{
-    width: 15%;
+    width: 20%;
     word-spacing: 10px;
     font-size: 25px;
     color: black;
@@ -379,11 +380,12 @@ body{
     #products-details img{
         padding: 20px;
     }
-
-    #products-details h4 div{
-        width: 20%;
+    #products-details h4{
+        font-size: 30px;
     }
-
+    #products-details h3{
+        font-size: 25px;
+    }
     .description{
         font-size: 20px;
     }

@@ -233,7 +233,17 @@ ul>li:hover {
 }
 
 #allProducts h5 {
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
+    color: rgb(26, 24, 24);
+}
+
+#allProducts h5 div{
+    width: 25%;
+    word-spacing: 10px;
+    font-size: 18px;
+    color: black;
 }
 
 .card-div p {
@@ -243,20 +253,13 @@ ul>li:hover {
     height: auto;
 }
 
-#allProducts h4,
-h5,
-p {
-    margin-left: 10px;
-}
+
 
 #allProducts h4 {
-    color: rgb(28, 136, 179);
-    font-size: 20px;
-}
-
-#allProducts h5 {
-    color: #FF6801;
+    color: rgb(26, 24, 24);
+    font-size: 18px;
     margin-top: 20px;
+    font-style: italic;
 
 }
 

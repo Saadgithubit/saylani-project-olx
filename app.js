@@ -64,7 +64,7 @@ function renderAddsItems(allAdds){
   const title = document.createElement('h4')
   title.innerHTML = ad.title
   const amount = document.createElement('h5')
-  amount.innerHTML = `Rs ${ad.amount}`
+  amount.innerHTML = `Rs ${ad.amount} <div><i class="fa-solid fa-share-nodes"></i> <i class="fa-regular fa-heart"></i></div>`
   card.append(img)
   card.append(line)
   card.append(amount)
@@ -107,6 +107,8 @@ const signOutBtn = document.getElementById('signout')
 signOutBtn.addEventListener('click',()=>{
   logout()
 })
+
+
 // getData()
 
 // function getData(){

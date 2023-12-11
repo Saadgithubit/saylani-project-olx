@@ -14,7 +14,7 @@ signUpBtn.addEventListener('click' , ()=> {
     const password =inputField[4]
     const confirmPassword = inputField[5]
 
-    if(!fullName.value || !fatherName.value || !email.value || !password.value || !confirmPassword.value){
+    if(!fullName.value || !fatherName.value || !email.value || !password.value || !confirmPassword.value || !contact.value){
       Swal.fire({
   icon: "error",
   title: "Oops...",
