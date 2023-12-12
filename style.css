@@ -406,6 +406,7 @@ p {
 
     .nav-login-btn a,
     .nav-sell-btn a {
+        width: 100%;
         text-decoration: none;
         color: black;
     }
