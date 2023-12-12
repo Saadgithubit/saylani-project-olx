@@ -17,6 +17,7 @@ html {
 
 .navbar {
     display: none !important;
+    width: 100%;
 }
 
 .header-top {
@@ -397,17 +398,22 @@ p {
 
     .nav-login-btn,
     .nav-sell-btn {
-        background-color: #f7f8f8;
-        border: none !important;
+        width: 100%;
         font-size: 23px;
-        margin: 30px;
+        height: 60px !important;
+        margin-top: 10px;
     }
 
     .nav-login-btn a,
     .nav-sell-btn a {
         text-decoration: none;
+        color: black;
     }
 
+    .off{
+        height: 90px;
+        border-bottom: 1px solid black !important;
+    }
     .header-top {
         width: 100%;
         display: flex;
@@ -643,15 +649,26 @@ p {
 
     .nav-login-btn,
     .nav-sell-btn {
-        background-color: #f7f8f8;
-        border: none !important;
+        width: 100%;
+        padding-left: 20px;
         font-size: 18px;
-        margin: 30px;
+        height: 60px !important;
+        margin-top: 10px;
     }
 
     .nav-login-btn a,
     .nav-sell-btn a {
         text-decoration: none;
+        color: black;
+    }
+
+    .off{
+        height: 90px;
+        border-bottom: 1px solid black !important;
+    }
+
+    .offcanvas{
+        width: 90% !important;
     }
 
     .header-top {
@@ -893,15 +910,26 @@ p {
 
     .nav-login-btn,
     .nav-sell-btn {
-        background-color: #f7f8f8;
-        border: none !important;
-        font-size: 16px;
-        margin: 30px;
+        width: 100%;
+        padding-left: 20px;
+        font-size: 18px;
+        height: 60px !important;
+        margin-top: 10px;
     }
 
     .nav-login-btn a,
     .nav-sell-btn a {
         text-decoration: none;
+        color: black;
+    }
+
+    .off{
+        height: 90px;
+        border-bottom: 1px solid black !important;
+    }
+
+    .offcanvas{
+        width: 80% !important;
     }
 
     .header-top {

@@ -28,6 +28,8 @@ onAuthStateChanged(auth, async (user) => {
     logInBtn.style.display = 'none'
     userName.style.display = 'block'
 
+    const navlogInBtn = document.querySelector('.nav-login-btn')
+    navlogInBtn.style.display = 'none'
     console.log(userName);
     const uid = user.uid;
     const userUid = await getUser(uid)
@@ -36,12 +38,16 @@ onAuthStateChanged(auth, async (user) => {
     // console.log('userUid ->' , userUid.fullName);
     const emailElement = document.getElementById('userId')
     emailElement.innerHTML = `${userUid.fullName}`
+    const userNameElement = document.getElementById('offcanvasNavbarLabel')
+    userNameElement.innerHTML = `Hello ${userUid.fullName}`
     // console.log(emailElement);
     renderAdds()
     
   }else{
     userName.style.display = 'none'
     logInBtn.style.display = 'block'
+    userNameElement.innerHTML = ''
+
   }
 });
 
