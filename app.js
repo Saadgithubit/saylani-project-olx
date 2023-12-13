@@ -39,7 +39,7 @@ onAuthStateChanged(auth, async (user) => {
     const emailElement = document.getElementById('userId')
     emailElement.innerHTML = `${userUid.fullName}`
     const userNameElement = document.getElementById('offcanvasNavbarLabel')
-    userNameElement.innerHTML = `Hello ${userUid.fullName}`
+    userNameElement.innerHTML = `<i class="fa-solid fa-user"></i> Hello ${userUid.fullName}`
     // console.log(emailElement);
     renderAdds()
     

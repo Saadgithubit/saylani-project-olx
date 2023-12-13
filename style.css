@@ -14,36 +14,48 @@ html {
 .container-fluid {
     width: 100% !important;
 }
+
 .navbar {
     display: none !important;
-    width: 17%;
-    height:auto ;
+    width: 12%;
+    height: 50px;
     position: absolute !important;
-    top: 10px;
+    top: 6px;
     left: 0;
-   
-    
+
+
 }
 
-.user-img{
-  font-size: 25px;
-  border: 1px solid black !important;
-  border-radius: 50%;
-  padding: 10px;
-  margin-right: 5px;
+.user-img {
+    font-size: 25px;
+    border: 1px solid black !important;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 5px;
 }
-.nav-div{
-  width: 100%;
+
+.nav-div {
+    width: 100% !important;
 }
-.nav-icon{
-  width: 100% !important;
+
+.nav-icon {
+    width: 100% !important;
+}
+
+.fa-user {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 22px;
+    margin-right: 20px;
 }
 
 nav-login-btn a,
-    .nav-sell-btn a {
-        text-decoration: none;
-        color: black;
-    }
+.nav-sell-btn a {
+    text-decoration: none;
+    color: black;
+}
+
 .header-top {
     display: flex;
     flex-wrap: wrap;
@@ -77,13 +89,14 @@ nav-login-btn a,
     padding: 10px 10px 10px 0;
     background-color: #f7f8f8;
     width: 100%;
+
 }
 
 .sel-div {
     width: 20%;
 }
 
-.btn-div{
+.btn-div {
     width: 20%;
     display: flex;
 }
@@ -108,8 +121,14 @@ nav-login-btn a,
 
 }
 
+.parent-inp {
+    border: 1px solid black;
+    width: 40%;
+    display: flex;
+}
+
 #input {
-    width: 500px;
+    width: 90%;
     height: 50px;
     border: 2px solid black;
     padding-left: 20px;
@@ -117,25 +136,18 @@ nav-login-btn a,
 }
 
 .icon-2 {
-    display: inline-block;
-    position: relative;
+    border: 1px solid black;
     height: 50px;
-    right: 51px;
-    bottom: 3px;
-
-}
-.icon-2 img{
+    width: 10%;
+    text-align: center;
+    font-size: 30px;
+    background-color: black;
+    color: white;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 2px;
+    position: relative;
+    right: 51px;
 }
-
-.search-bar {
-    width: 50px;
-    height: 50px;
-
-}
-
 
 #logIn-button {
 
@@ -154,7 +166,7 @@ nav-login-btn a,
 
 }
 
-.user{
+.user {
     height: 50px;
     border-radius: 10px;
 }
@@ -179,14 +191,15 @@ nav-login-btn a,
 
 } */
 /* ......................................Nav-Bar........................................ */
-.nav-bar{
+.nav-bar {
     margin-top: 10px;
 }
+
 .nav-bar>ul {
     display: flex;
 }
 
-.Categories{
+.Categories {
     margin: 15px 15px 15px -12px;
 }
 
@@ -206,24 +219,25 @@ ul>li:hover {
 
 }
 
-.carousel-item{
+.carousel-item {
     height: 100%;
 }
 
 /* .............................................products................................... */
-.sort-div{
+.sort-div {
     border-bottom: 1px solid black;
     width: 100%;
     padding: 10px;
     display: flex;
     justify-content: space-between;
 }
-.sort-div h3{
+
+.sort-div h3 {
     font-size: 23px;
     margin-left: 20px;
 }
 
-.sort-div select{
+.sort-div select {
     width: 15%;
     height: 30px;
 }
@@ -264,7 +278,7 @@ ul>li:hover {
     color: rgb(26, 24, 24);
 }
 
-#allProducts h5 div{
+#allProducts h5 div {
     width: 25%;
     word-spacing: 10px;
     font-size: 18px;
@@ -434,10 +448,11 @@ p {
         color: black;
     }
 
-    .off{
+    .off {
         height: 90px;
         border-bottom: 1px solid black !important;
     }
+
     .header-top {
         width: 100%;
         display: flex;
@@ -456,7 +471,7 @@ p {
         width: 80% !important;
     }
 
-    .user a button{
+    .user a button {
         border: none;
     }
 
@@ -467,8 +482,7 @@ p {
     .btn-div,
     .sell,
     .ul,
-    ul>li
-     {
+    ul>li {
         display: none;
     }
 
@@ -480,22 +494,22 @@ p {
 
     .parent-inp {
         width: 90%;
+        justify-content: center;
     }
 
     #input {
-        display: inline-block;
-        width: 100%;
-        height: 70px;
+        width: 80%;
+        height: 60px;
         font-size: 20px;
         padding-left: 80px;
         border-radius: 10px;
     }
 
-    .icon-2{
-        position: relative;
+    .icon-2 {
+        /* position: relative;
         left: 619px;
-        bottom: 70px;
-        height: 70px;
+        bottom: 70px; */
+        height: 60px;
     }
 
     /* .icon-2{
@@ -509,14 +523,15 @@ p {
         height: 100%;
     }
 
-    .carousel-inner{
+    .carousel-inner {
         height: 200px;
     }
 
-    .carousel-inner .carousel-item img{
+    .carousel-inner .carousel-item img {
         height: 100%;
     }
-    .sort-div h3{
+
+    .sort-div h3 {
         font-size: 23px !important;
         margin-left: 20px;
     }
@@ -671,6 +686,14 @@ p {
         display: block !important;
     }
 
+    .nav-div {
+        width: 90% !important;
+    }
+
+    .nav-icon {
+        width: 80% !important;
+    }
+
     .nav-login-btn,
     .nav-sell-btn {
         width: 100%;
@@ -686,12 +709,12 @@ p {
         color: black;
     }
 
-    .off{
+    .off {
         height: 90px;
         border-bottom: 1px solid black !important;
     }
 
-    .offcanvas{
+    .offcanvas {
         width: 90% !important;
     }
 
@@ -727,8 +750,7 @@ p {
     .btn-div,
     .sell,
     .ul,
-    ul>li
-    {
+    ul>li {
         display: none;
     }
 
@@ -739,31 +761,28 @@ p {
 
     .parent-inp {
         width: 100%;
-        padding: 0;
     }
 
     #input {
         display: inline-block;
         width: 100%;
         height: 60px;
-        font-size: 20px;
-        padding-left: 40px;
+        font-size: 17px;
+        padding-left: 20px;
         border-radius: 10px;
 
     }
 
-    .icon-2{
-        position: relative;
-        left: 351px;
-        bottom: 60px;
+    .icon-2 {
+        width: 15%;
         height: 60px;
     }
 
-    .carousel-inner{
+    .carousel-inner {
         height: 180px;
     }
 
-    .carousel-inner .carousel-item img{
+    .carousel-inner .carousel-item img {
         height: 100%;
     }
 
@@ -771,14 +790,15 @@ p {
         height: 100%;
     }
 
-    .sort-div h3{
+    .sort-div h3 {
         font-size: 23px !important;
         margin-left: 20px;
     }
 
-    .sort-div select{
+    .sort-div select {
         width: 25%;
     }
+
     #allProducts {
         justify-content: center;
     }
@@ -912,16 +932,6 @@ p {
     }
 }
 
-@media only screen and (max-width: 375px){
-    #input{
-        font-size: 17px;
-        padding-left: 30px;
-    }
-    .icon-2{
-        left: 305px;
-    }
-}
-
 
 @media only screen and (max-width: 320px) {
     body {
@@ -930,13 +940,25 @@ p {
 
     .navbar {
         display: block !important;
+        width: 100%;
+        position: relative !important;
+        bottom: 20px !important;
+    }
+
+
+    .nav-div {
+        width: 50px !important;
+    }
+
+    .nav-icon {
+        width: 50px !important;
     }
 
     .nav-login-btn,
     .nav-sell-btn {
         width: 100%;
-        padding-left: 20px;
-        font-size: 18px;
+        padding-left: 10px;
+        font-size: 15px;
         height: 60px !important;
         margin-top: 10px;
     }
@@ -947,19 +969,23 @@ p {
         color: black;
     }
 
-    .off{
+    .off {
         height: 90px;
         border-bottom: 1px solid black !important;
     }
 
-    .offcanvas{
-        width: 80% !important;
+    .offcanvas {
+        width: 90% !important;
+    }
+
+    .offcanvas h5 {
+        font-size: 15px;
     }
 
     .header-top {
         width: 100% !important;
         display: flex;
-        padding-left: 40px;
+        padding-left: 43px;
     }
 
     .user {
@@ -987,8 +1013,7 @@ p {
     .btn-div,
     .sell,
     .ul,
-    ul>li
-    {
+    ul>li {
         display: none;
     }
 
@@ -1008,25 +1033,24 @@ p {
     }
 
     #input {
-        display: inline-block;
         width: 100%;
         height: 60px;
         font-size: 15px;
-        padding-left: 30px;
+        padding-left: 2px;
         border-radius: 10px;
     }
 
-    .icon-2{
-        position: relative;
-        left: 249px;
-        bottom: 60px;
+    .icon-2 {
+        width: 15%;
         height: 60px;
+        right: 40px;
     }
-    .carousel-inner{
+
+    .carousel-inner {
         height: 160px;
     }
 
-    .carousel-inner .carousel-item img{
+    .carousel-inner .carousel-item img {
         height: 100%;
     }
 
@@ -1034,12 +1058,12 @@ p {
         height: 100%;
     }
 
-    .sort-div h3{
+    .sort-div h3 {
         font-size: 23px !important;
         margin-left: 20px;
     }
 
-    .sort-div select{
+    .sort-div select {
         width: 35%;
     }
 
