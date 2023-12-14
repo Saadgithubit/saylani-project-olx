@@ -136,6 +136,50 @@
     margin: 30px 0 0 50px;
 }
 
+#container div button{
+    width: 80px;
+    height: 60px;
+    margin: 20px;
+    background-color: #f7f8f8;
+    border-color: lightgray;
+    border-radius: 5px;
+}
+
+#update-ad{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+
+}
+#update-ad input{
+    margin-top: 10px;
+    height: 80px;
+    font-size: 20px;
+}
+#update-ad h4{
+    margin-top: 10px;
+}
+#update-ad .discription-inp{
+    height: 150px;
+}
+
+#update-ad img{
+    width: 200px;
+    margin-top: 10px;
+}
+
+#update-ad button{
+    margin-top: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: #f7f8f8;
+    border-color: lightgray;
+    border-radius: 5px;
+}
+
 @media only screen and (min-width: 426px) and (max-width: 768px){
     
     .header-top{
@@ -186,6 +230,10 @@
 
             #container div h4 {
                 width: 30%;
+            }
+
+            #update-ad input{
+                font-size: 15px;
             }
 
         }

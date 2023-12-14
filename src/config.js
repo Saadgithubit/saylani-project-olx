@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
 import { getAuth, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
-import{ getFirestore , collection,  addDoc, setDoc,query, where, getDocs, doc, getDoc,orderBy} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"
+import{ getFirestore , collection,  addDoc, deleteDoc, updateDoc, setDoc,query, where, getDocs, doc, getDoc,orderBy} from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js"
 import { getStorage , ref, uploadBytes, getDownloadURL,  }
  from "https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js"
 
@@ -231,6 +231,16 @@ async function sortAdds(sortedValue){
 }
 
 
+async function deleteData(id){
+  await deleteDoc(doc(db, "adds", id));
+}
+
+async function updateAd(updateAdElements,id){
+  const washingtonRef = doc(db, "adds", id);
+
+await updateDoc(washingtonRef, updateAdElements);
+
+}
 
  export{
   register,
@@ -243,5 +253,7 @@ async function sortAdds(sortedValue){
   getUser,
   getUserAdds,
   sortAdds,
-  logout
+  logout,
+  deleteData,
+  updateAd
  }
